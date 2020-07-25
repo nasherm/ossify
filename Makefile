@@ -1,8 +1,10 @@
+SUBDIRS := src/
 
+all: $(SUBDIRS)
+$(SUBDIRS):
+	$(MAKE) -C $@
 
-boot: boot.asm
-	nasm $^ -o $@.bin
+run:
+	qemu-system-i386 -fda build/os-image.bin
 
-
-run: boot.bin
-	qemu $^
+.PHONY: all $(SUBDIRS)
