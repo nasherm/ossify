@@ -2,14 +2,9 @@
 KERNEL_OFFSET equ 0x1000
 
 mov [BOOT_DRIVE], dl
-mov ax, 0x0000
-mov es, ax    
-mov ds, ax
-mov ax, 0x0000
-cli
-mov ss, ax
-mov sp, 0x9000
-sti
+mov bp, 0x9000
+mov sp, bp
+
 mov bx, MSG_REAL_MODE
 call print
 call print_nl
@@ -59,4 +54,4 @@ times 510 - ($-$$) db 0
 dw 0xaa55
 
 ;sector padding
-times 256 dw 0xDADA
+; times 256 dw 0xDADA
