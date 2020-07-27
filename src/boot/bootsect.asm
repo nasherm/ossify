@@ -17,12 +17,12 @@ call print_nl
 call switch_to_pm
 jmp $
 
-%include "asm_utils/boot_sect_print.asm"
-%include "asm_utils/boot_sect_print_hex.asm"
-%include "asm_utils/boot_sect_disk.asm"
-%include "asm_utils/32bit_gdt.asm"
-%include "asm_utils/32bit_print.asm"
-%include "asm_utils/32bit_switch.asm"
+%include "./boot/boot_sect_print.asm"
+%include "./boot/boot_sect_print_hex.asm"
+%include "./boot/boot_sect_disk.asm"
+%include "./boot/32bit_gdt.asm"
+%include "./boot/32bit_print.asm"
+%include "./boot/32bit_switch.asm"
 
 [bits 16]
 load_kernel:
