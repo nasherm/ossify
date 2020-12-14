@@ -1,7 +1,7 @@
 # Introduction
 A hobby OS for fun times
 
-# Setup and Building
+# Setup
 ## Build tools
 A few tools need to be installed first install binutils with the following commands. First set some environment variables
 
@@ -41,3 +41,12 @@ To debug and develop one has to follow a similar process as with building to bui
     $ make install
 
 Now you have all the tools you need to hack
+
+# Build
+## Main
+
+    make
+    make run
+
+## Debug
+    make debug
