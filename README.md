@@ -1,5 +1,5 @@
 # Introduction
-A hobby OS for fun times
+A 32bit x86 hobby OS
 
 # Setup
 ## Build tools
