@@ -1,0 +1,13 @@
+[build]
+target = "aarch64-armv8.json"
+# [target.'cfg(arch = "aarch64")']
+# runner =
+[unstable]
+# We rebuild the core library for our custom
+# target and the compiler builtins which
+# is a dependency of core
+build-std=["core","compiler_builtins"]
+# This enables the memory functions that come with
+# compiler_builtins that are disabled by disabled so
+# as not to clash with standard C functions i.e. memset, memcpy e.t.c
+build-std-features = ["compiler-builtins-mem"]
